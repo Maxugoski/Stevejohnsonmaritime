@@ -188,7 +188,8 @@ const careerSlidesData = [
     operator: "ExxonMobil (Mobil Producing Nigeria)",
     rank: "Master & Offshore Installation Manager (OIM)",
     desc: "ExxonMobil flagship Floating Storage & Offloading (FSO) unit on the Yoho field. Commanded 24/7 continuous offshore crude production, oil export terminals, and zero-LTI safety protocols.",
-    flag: "🇳🇬"
+    flag: "🇳🇬",
+    image: "assets/images/vessels/Ship_YOHO_01-1-scaled-1.webp"
   },
   {
     title: "YOHO Tandem Mooring",
@@ -198,7 +199,8 @@ const careerSlidesData = [
     operator: "ExxonMobil (Yoho Field Operations)",
     rank: "Mooring Master & OIM",
     desc: "Specialized offshore tandem berthing and crude offloading operations connecting dynamic positioning shuttle tankers with the Yoho FSO terminal in open sea conditions.",
-    flag: "🇳🇬"
+    flag: "🇳🇬",
+    image: "assets/images/vessels/Ship_YOHO_02_Tandem-Mooring-1.webp"
   },
   {
     title: "YOHO Production Operations",
@@ -208,7 +210,8 @@ const careerSlidesData = [
     operator: "ExxonMobil Nigeria",
     rank: "Operations Lead & OIM",
     desc: "Comprehensive oversight of facility integrity management, gas-oil separation, electronic permit to work (e-PTW) systems, and multi-disciplinary offshore crew management.",
-    flag: "🇳🇬"
+    flag: "🇳🇬",
+    image: "assets/images/vessels/Ship_YOHO_03-2.webp"
   },
   {
     title: "YOHO Malaysian Shipyard",
@@ -218,7 +221,8 @@ const careerSlidesData = [
     operator: "ExxonMobil / Malaysian Marine & Heavy Engineering",
     rank: "Operations Specialist / Shipyard Oversight",
     desc: "Managed extensive major drydocking, hull structure rejuvenation, marine life-extension evaluations, and DCS overview systems commissioning in Malaysia.",
-    flag: "🇲🇾"
+    flag: "🇲🇾",
+    image: "assets/images/vessels/Ship_YOHO_05_Shipyard-1.webp"
   },
   {
     title: "MT Sir Michael",
@@ -228,7 +232,8 @@ const careerSlidesData = [
     operator: "Seaforce Shipping Ltd / Zenon Petroleum & Gas",
     rank: "Master & Operations Superintendent",
     desc: "Commanded coastal and regional petroleum products transportation, managing cargo loading/discharging, port vetting, and navigation safety.",
-    flag: "🇳🇬"
+    flag: "🇳🇬",
+    image: "assets/images/vessels/Ship_Sir-Michael.webp"
   },
   {
     title: "SS LNG Lagos",
@@ -238,7 +243,8 @@ const careerSlidesData = [
     operator: "Bonny Gas Transport / Nigeria LNG UK Ltd",
     rank: "Second Officer",
     desc: "Supervised cryogenic natural gas cargo operations, boil-off rate controls, and bridge navigation across North Atlantic and European discharge terminals.",
-    flag: "🇬🇧"
+    flag: "🇬🇧",
+    image: "assets/images/vessels/Ship_LNG-Lagos_02-scaled-1.webp"
   },
   {
     title: "MT Iran Rajai",
@@ -248,7 +254,8 @@ const careerSlidesData = [
     operator: "Islamic Republic of Iran Shipping Lines (IRISL)",
     rank: "Chief Officer",
     desc: "Directed chemical and petroleum products handling, inert gas operations, crude oil washing (COW), and international passage execution.",
-    flag: "🇮🇷"
+    flag: "🇮🇷",
+    image: "assets/images/vessels/Ship_Iran-Rajai-scaled-1.webp"
   },
   {
     title: "MV Iran Motahari",
@@ -258,7 +265,8 @@ const careerSlidesData = [
     operator: "Islamic Republic of Iran Shipping Lines (IRISL)",
     rank: "Chief Officer",
     desc: "Chief Mate overseeing dry bulk cargo distributions, hull shear stress calculations, and open ocean navigation across international trading lines.",
-    flag: "🇮🇷"
+    flag: "🇮🇷",
+    image: "assets/images/vessels/Ship_Iran-Motahari-1.webp"
   },
   {
     title: "MV Iran Sepah",
@@ -268,7 +276,8 @@ const careerSlidesData = [
     operator: "Islamic Republic of Iran Shipping Lines (IRISL)",
     rank: "Chief Officer",
     desc: "Supervised multinational deck crew, SOLAS safety equipment maintenance, heavy weather ballasting, and high-seas watchkeeping.",
-    flag: "🇮🇷"
+    flag: "🇮🇷",
+    image: "assets/images/vessels/Ship_Iran-Sepah-1.webp"
   },
   {
     title: "MV Iran Ashrafi",
@@ -278,7 +287,8 @@ const careerSlidesData = [
     operator: "Islamic Republic of Iran Shipping Lines (IRISL)",
     rank: "Chief Officer",
     desc: "Handymax bulk carrier operations managing mineral, coal, and grain shipments across Middle Eastern, Asian, and European shipping ports.",
-    flag: "🇮🇷"
+    flag: "🇮🇷",
+    image: "assets/images/vessels/Ship_Iran-Asharafi_.webp"
   },
   {
     title: "MV Iran Meelad",
@@ -288,7 +298,8 @@ const careerSlidesData = [
     operator: "Islamic Republic of Iran Shipping Lines (IRISL)",
     rank: "Chief Officer",
     desc: "General breakbulk and industrial project cargo transport, heavy-lift derrick rigging, and deck stability calculations.",
-    flag: "🇮🇷"
+    flag: "🇮🇷",
+    image: "assets/images/vessels/Ship_Iran-Meelad.webp"
   },
   {
     title: "MV Zhong Fa",
@@ -298,7 +309,8 @@ const careerSlidesData = [
     operator: "International Cargo Lines",
     rank: "Chief Officer",
     desc: "Ocean freight operations managing intercontinental trade passages, cargo hold inspections, and port authority liaison.",
-    flag: "🇨🇳"
+    flag: "🇨🇳",
+    image: "assets/images/vessels/Ship_Zhong-Fa-scaled-1.webp"
   },
   {
     title: "MV Kota Ratna",
@@ -308,7 +320,8 @@ const careerSlidesData = [
     operator: "Pacific International Lines (PIL) Singapore",
     rank: "Chief Officer",
     desc: "Cellular container and breakbulk cargo vessel serving Southeast Asia and Indian Ocean routes. Directed container bay stowage and lashings.",
-    flag: "🇸🇬"
+    flag: "🇸🇬",
+    image: "assets/images/vessels/Ship_Kota-Ratna.webp"
   },
   {
     title: "MV Kota Buana",
@@ -318,7 +331,8 @@ const careerSlidesData = [
     operator: "Pacific International Lines (PIL) Singapore",
     rank: "Chief Officer",
     desc: "Navigated congested straits, archipelago passages, and regional container feeder distribution hubs.",
-    flag: "🇸🇬"
+    flag: "🇸🇬",
+    image: "assets/images/vessels/Ship_Kota-Buana-1.webp"
   },
   {
     title: "MV Pacific Eagle",
@@ -328,7 +342,8 @@ const careerSlidesData = [
     operator: "Pacific International Lines (PIL) Singapore",
     rank: "Second Officer",
     desc: "Maintained nautical passage plans, ECDIS radar tracking, chart corrections, and emergency steering readiness.",
-    flag: "🇸🇬"
+    flag: "🇸🇬",
+    image: "assets/images/vessels/Ship_Pacific-Eagle-1.webp"
   },
   {
     title: "MV Kota Alam",
@@ -338,7 +353,8 @@ const careerSlidesData = [
     operator: "Pacific International Lines (PIL) Singapore",
     rank: "Chief Officer",
     desc: "Handled heavy industrial cargo, breakbulk, and international freight with highest standards of seamanship and hold ventilation.",
-    flag: "🇸🇬"
+    flag: "🇸🇬",
+    image: "assets/images/vessels/Ship_Kota-Alam.webp"
   },
   {
     title: "MV River Maje",
@@ -348,7 +364,8 @@ const careerSlidesData = [
     operator: "Nigerian National Shipping Lines (NNSL)",
     rank: "Second Officer",
     desc: "Served on NNSL's renowned River-class merchant fleet connecting West Africa, the United Kingdom, and continental Europe.",
-    flag: "🇳🇬"
+    flag: "🇳🇬",
+    image: "assets/images/vessels/Ship_River-Maje-1.webp"
   },
   {
     title: "MV River Gurara",
@@ -358,7 +375,8 @@ const careerSlidesData = [
     operator: "Nigerian National Shipping Lines (NNSL)",
     rank: "Third Officer",
     desc: "Navigational bridge watchkeeping, cargo gear supervision, and routine maintenance in major European and African ports.",
-    flag: "🇳🇬"
+    flag: "🇳🇬",
+    image: "assets/images/vessels/Ship_River-Gurara-1.webp"
   },
   {
     title: "MV River Asab",
@@ -368,7 +386,8 @@ const careerSlidesData = [
     operator: "Nigerian National Shipping Lines (NNSL)",
     rank: "Third Officer",
     desc: "Transoceanic cargo passages, bridge navigation, celestial positioning, and marine emergency drill leadership.",
-    flag: "🇳🇬"
+    flag: "🇳🇬",
+    image: "assets/images/vessels/Ship_River-Asab.webp"
   },
   {
     title: "MV River Majiden",
@@ -378,7 +397,8 @@ const careerSlidesData = [
     operator: "Nigerian National Shipping Lines (NNSL)",
     rank: "Deck Cadet",
     desc: "Comprehensive cadetship training mastering seamanship, chartwork, celestial sightings, and ship maintenance.",
-    flag: "🇳🇬"
+    flag: "🇳🇬",
+    image: "assets/images/vessels/Ship_River-Majidun.webp"
   },
   {
     title: "MV River Oji",
@@ -388,7 +408,8 @@ const careerSlidesData = [
     operator: "Nigerian National Shipping Lines (NNSL)",
     rank: "Deck Cadet",
     desc: "Hands-on cadet operations covering drydocking, cargo gear testing, stability calculations, and bridge watch assistance.",
-    flag: "🇳🇬"
+    flag: "🇳🇬",
+    image: "assets/images/vessels/Ship_River-Oji.webp"
   },
   {
     title: "MV River Andoni",
@@ -398,7 +419,8 @@ const careerSlidesData = [
     operator: "Nigerian National Shipping Lines (NNSL)",
     rank: "Deck Cadet",
     desc: "First official sea appointment laying the foundation for a 42-year master-level maritime and offshore command career.",
-    flag: "🇳🇬"
+    flag: "🇳🇬",
+    image: "assets/images/vessels/Ship_River-Andoni.webp"
   }
 ];
 
@@ -490,6 +512,16 @@ function initCareerSlideshow() {
 
     displayCard.innerHTML = `
       <div class="slide-content-container">
+        <!-- Left: Real Vessel Photograph -->
+        <div class="slide-img-container">
+          <img src="${slide.image}" alt="${slide.title} Vessel Photograph" class="slide-vessel-photo" loading="lazy" onerror="this.src='assets/images/hero_vlcc.jpg'">
+          <div class="slide-img-overlay">
+            <span class="slide-img-badge"><i class="fa-solid fa-camera"></i> Official Record</span>
+            <span class="slide-img-badge">${slide.category}</span>
+          </div>
+        </div>
+
+        <!-- Right: Vessel Information & Metrics -->
         <div>
           <div class="slide-vessel-meta">
             <span class="slide-category-tag">${slide.category}</span>
@@ -504,6 +536,21 @@ function initCareerSlideshow() {
             <span><i class="fa-solid fa-weight-hanging"></i> Summer Deadweight: ${slide.dwt}</span>
           </div>
 
+          <div class="slide-tech-card">
+            <div class="slide-tech-item">
+              <span class="slide-tech-label">Operating Line / Owner:</span>
+              <span class="slide-tech-val">${slide.operator}</span>
+            </div>
+            <div class="slide-tech-item">
+              <span class="slide-tech-label">Command Role:</span>
+              <span class="slide-tech-val" style="color: var(--accent-cyan);">${slide.rank}</span>
+            </div>
+            <div class="slide-tech-item">
+              <span class="slide-tech-label">Safety Benchmark:</span>
+              <span class="slide-tech-val" style="color: var(--accent-emerald);"><i class="fa-solid fa-shield-check"></i> Zero Lost-Time Incidents</span>
+            </div>
+          </div>
+
           <p class="slide-desc-text">${slide.desc}</p>
 
           <div class="slide-actions-row">
@@ -513,29 +560,8 @@ function initCareerSlideshow() {
             </button>
             <a href="#fleet" class="btn-secondary">
               <i class="fa-solid fa-ship"></i>
-              <span>View In Full Fleet Directory</span>
+              <span>View Full Fleet Directory</span>
             </a>
-          </div>
-        </div>
-
-        <div>
-          <div class="slide-tech-card">
-            <div class="slide-tech-item">
-              <span class="slide-tech-label">Operator / Line:</span>
-              <span class="slide-tech-val">${slide.operator}</span>
-            </div>
-            <div class="slide-tech-item">
-              <span class="slide-tech-label">Rank / Command:</span>
-              <span class="slide-tech-val" style="color: var(--accent-cyan);">${slide.rank}</span>
-            </div>
-            <div class="slide-tech-item">
-              <span class="slide-tech-label">Classification:</span>
-              <span class="slide-tech-val">${slide.category}</span>
-            </div>
-            <div class="slide-tech-item">
-              <span class="slide-tech-label">Safety Benchmark:</span>
-              <span class="slide-tech-val" style="color: var(--accent-emerald);">Zero Lost-Time Incidents</span>
-            </div>
           </div>
         </div>
       </div>
@@ -608,6 +634,10 @@ function initCareerSlideshow() {
       <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
         <span class="vessel-type-pill">${slide.category}</span>
         <span class="vessel-flag">${slide.flag}</span>
+      </div>
+
+      <div style="border-radius: var(--radius-md); overflow: hidden; margin-bottom: 20px; max-height: 260px; border: 1px solid var(--border-color); box-shadow: var(--shadow-md);">
+        <img src="${slide.image}" alt="${slide.title}" style="width: 100%; height: 260px; object-fit: cover;" onerror="this.src='assets/images/hero_vlcc.jpg'">
       </div>
 
       <h2 style="font-size: 1.8rem; margin-bottom: 6px; color: var(--text-primary);">${slide.title}</h2>
