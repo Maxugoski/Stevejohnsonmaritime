@@ -17,13 +17,16 @@ document.addEventListener('DOMContentLoaded', () => {
   // 4. Animated Number Counters
   initNumberCounters();
 
-  // 5. Fleet Directory & Interactive Filter Gallery
+  // 5. Career Overview & Professional Summary Slideshow
+  initCareerSlideshow();
+
+  // 6. Fleet Directory & Interactive Filter Gallery
   initFleetGallery();
 
-  // 6. Credentials & Certifications Vault
+  // 7. Credentials & Certifications Vault
   initCredentialsVault();
 
-  // 7. Consultation Form Handler
+  // 8. Consultation Form Handler
   initConsultationForm();
 });
 
@@ -170,6 +173,476 @@ function initNumberCounters() {
   const metricsSection = document.querySelector('.hero-metrics-strip');
   if (metricsSection) {
     observer.observe(metricsSection);
+  }
+}
+
+/* ==========================================================================
+   CAREER OVERVIEW & PROFESSIONAL SUMMARY SLIDESHOW CONTROLLER
+   ========================================================================== */
+const careerSlidesData = [
+  {
+    title: "YOHO",
+    category: "FSO / VLCC",
+    imo: "7370181",
+    dwt: "276,735 DWT",
+    operator: "ExxonMobil (Mobil Producing Nigeria)",
+    rank: "Master & Offshore Installation Manager (OIM)",
+    desc: "ExxonMobil flagship Floating Storage & Offloading (FSO) unit on the Yoho field. Commanded 24/7 continuous offshore crude production, oil export terminals, and zero-LTI safety protocols.",
+    flag: "🇳🇬"
+  },
+  {
+    title: "YOHO Tandem Mooring",
+    category: "Terminal Operations",
+    imo: "7370181",
+    dwt: "276,735 DWT",
+    operator: "ExxonMobil (Yoho Field Operations)",
+    rank: "Mooring Master & OIM",
+    desc: "Specialized offshore tandem berthing and crude offloading operations connecting dynamic positioning shuttle tankers with the Yoho FSO terminal in open sea conditions.",
+    flag: "🇳🇬"
+  },
+  {
+    title: "YOHO Production Operations",
+    category: "Offshore Installation",
+    imo: "7370181",
+    dwt: "276,735 DWT",
+    operator: "ExxonMobil Nigeria",
+    rank: "Operations Lead & OIM",
+    desc: "Comprehensive oversight of facility integrity management, gas-oil separation, electronic permit to work (e-PTW) systems, and multi-disciplinary offshore crew management.",
+    flag: "🇳🇬"
+  },
+  {
+    title: "YOHO Malaysian Shipyard",
+    category: "Drydock & Life Extension",
+    imo: "7370181",
+    dwt: "276,735 DWT",
+    operator: "ExxonMobil / Malaysian Marine & Heavy Engineering",
+    rank: "Operations Specialist / Shipyard Oversight",
+    desc: "Managed extensive major drydocking, hull structure rejuvenation, marine life-extension evaluations, and DCS overview systems commissioning in Malaysia.",
+    flag: "🇲🇾"
+  },
+  {
+    title: "MT Sir Michael",
+    category: "Products Tanker",
+    imo: "7414743",
+    dwt: "8,900 DWT",
+    operator: "Seaforce Shipping Ltd / Zenon Petroleum & Gas",
+    rank: "Master & Operations Superintendent",
+    desc: "Commanded coastal and regional petroleum products transportation, managing cargo loading/discharging, port vetting, and navigation safety.",
+    flag: "🇳🇬"
+  },
+  {
+    title: "SS LNG Lagos",
+    category: "LNG Carrier",
+    imo: "7360124",
+    dwt: "68,206 DWT",
+    operator: "Bonny Gas Transport / Nigeria LNG UK Ltd",
+    rank: "Second Officer",
+    desc: "Supervised cryogenic natural gas cargo operations, boil-off rate controls, and bridge navigation across North Atlantic and European discharge terminals.",
+    flag: "🇬🇧"
+  },
+  {
+    title: "MT Iran Rajai",
+    category: "Chemical & Products Tanker",
+    imo: "8003369",
+    dwt: "39,600 DWT",
+    operator: "Islamic Republic of Iran Shipping Lines (IRISL)",
+    rank: "Chief Officer",
+    desc: "Directed chemical and petroleum products handling, inert gas operations, crude oil washing (COW), and international passage execution.",
+    flag: "🇮🇷"
+  },
+  {
+    title: "MV Iran Motahari",
+    category: "Bulk Carrier",
+    imo: "7521649",
+    dwt: "35,110 DWT",
+    operator: "Islamic Republic of Iran Shipping Lines (IRISL)",
+    rank: "Chief Officer",
+    desc: "Chief Mate overseeing dry bulk cargo distributions, hull shear stress calculations, and open ocean navigation across international trading lines.",
+    flag: "🇮🇷"
+  },
+  {
+    title: "MV Iran Sepah",
+    category: "Bulk Carrier",
+    imo: "7375363",
+    dwt: "33,856 DWT",
+    operator: "Islamic Republic of Iran Shipping Lines (IRISL)",
+    rank: "Chief Officer",
+    desc: "Supervised multinational deck crew, SOLAS safety equipment maintenance, heavy weather ballasting, and high-seas watchkeeping.",
+    flag: "🇮🇷"
+  },
+  {
+    title: "MV Iran Ashrafi",
+    category: "Bulk Carrier",
+    imo: "8309646",
+    dwt: "43,499 DWT",
+    operator: "Islamic Republic of Iran Shipping Lines (IRISL)",
+    rank: "Chief Officer",
+    desc: "Handymax bulk carrier operations managing mineral, coal, and grain shipments across Middle Eastern, Asian, and European shipping ports.",
+    flag: "🇮🇷"
+  },
+  {
+    title: "MV Iran Meelad",
+    category: "General Cargo",
+    imo: "7052997",
+    dwt: "16,630 DWT",
+    operator: "Islamic Republic of Iran Shipping Lines (IRISL)",
+    rank: "Chief Officer",
+    desc: "General breakbulk and industrial project cargo transport, heavy-lift derrick rigging, and deck stability calculations.",
+    flag: "🇮🇷"
+  },
+  {
+    title: "MV Zhong Fa",
+    category: "Multi-Purpose Cargo",
+    imo: "7107168",
+    dwt: "17,098 DWT",
+    operator: "International Cargo Lines",
+    rank: "Chief Officer",
+    desc: "Ocean freight operations managing intercontinental trade passages, cargo hold inspections, and port authority liaison.",
+    flag: "🇨🇳"
+  },
+  {
+    title: "MV Kota Ratna",
+    category: "Container & Cargo",
+    imo: "7330478",
+    dwt: "14,225 DWT",
+    operator: "Pacific International Lines (PIL) Singapore",
+    rank: "Chief Officer",
+    desc: "Cellular container and breakbulk cargo vessel serving Southeast Asia and Indian Ocean routes. Directed container bay stowage and lashings.",
+    flag: "🇸🇬"
+  },
+  {
+    title: "MV Kota Buana",
+    category: "Dry Cargo",
+    imo: "8324309",
+    dwt: "6,797 DWT",
+    operator: "Pacific International Lines (PIL) Singapore",
+    rank: "Chief Officer",
+    desc: "Navigated congested straits, archipelago passages, and regional container feeder distribution hubs.",
+    flag: "🇸🇬"
+  },
+  {
+    title: "MV Pacific Eagle",
+    category: "Dry Cargo",
+    imo: "7706419",
+    dwt: "11,067 DWT",
+    operator: "Pacific International Lines (PIL) Singapore",
+    rank: "Second Officer",
+    desc: "Maintained nautical passage plans, ECDIS radar tracking, chart corrections, and emergency steering readiness.",
+    flag: "🇸🇬"
+  },
+  {
+    title: "MV Kota Alam",
+    category: "General Cargo",
+    imo: "7329510",
+    dwt: "16,635 DWT",
+    operator: "Pacific International Lines (PIL) Singapore",
+    rank: "Chief Officer",
+    desc: "Handled heavy industrial cargo, breakbulk, and international freight with highest standards of seamanship and hold ventilation.",
+    flag: "🇸🇬"
+  },
+  {
+    title: "MV River Maje",
+    category: "Multi-Purpose Cargo",
+    imo: "7716749",
+    dwt: "16,489 DWT",
+    operator: "Nigerian National Shipping Lines (NNSL)",
+    rank: "Second Officer",
+    desc: "Served on NNSL's renowned River-class merchant fleet connecting West Africa, the United Kingdom, and continental Europe.",
+    flag: "🇳🇬"
+  },
+  {
+    title: "MV River Gurara",
+    category: "Multi-Purpose Cargo",
+    imo: "7716713",
+    dwt: "16,329 DWT",
+    operator: "Nigerian National Shipping Lines (NNSL)",
+    rank: "Third Officer",
+    desc: "Navigational bridge watchkeeping, cargo gear supervision, and routine maintenance in major European and African ports.",
+    flag: "🇳🇬"
+  },
+  {
+    title: "MV River Asab",
+    category: "Multi-Purpose Cargo",
+    imo: "7716323",
+    dwt: "11,647 DWT",
+    operator: "Nigerian National Shipping Lines (NNSL)",
+    rank: "Third Officer",
+    desc: "Transoceanic cargo passages, bridge navigation, celestial positioning, and marine emergency drill leadership.",
+    flag: "🇳🇬"
+  },
+  {
+    title: "MV River Majiden",
+    category: "Multi-Purpose Cargo",
+    imo: "7716701",
+    dwt: "16,337 DWT",
+    operator: "Nigerian National Shipping Lines (NNSL)",
+    rank: "Deck Cadet",
+    desc: "Comprehensive cadetship training mastering seamanship, chartwork, celestial sightings, and ship maintenance.",
+    flag: "🇳🇬"
+  },
+  {
+    title: "MV River Oji",
+    category: "Multi-Purpose Cargo",
+    imo: "7716684",
+    dwt: "16,487 DWT",
+    operator: "Nigerian National Shipping Lines (NNSL)",
+    rank: "Deck Cadet",
+    desc: "Hands-on cadet operations covering drydocking, cargo gear testing, stability calculations, and bridge watch assistance.",
+    flag: "🇳🇬"
+  },
+  {
+    title: "MV River Andoni",
+    category: "Multi-Purpose Cargo",
+    imo: "7716348",
+    dwt: "11,557 DWT",
+    operator: "Nigerian National Shipping Lines (NNSL)",
+    rank: "Deck Cadet",
+    desc: "First official sea appointment laying the foundation for a 42-year master-level maritime and offshore command career.",
+    flag: "🇳🇬"
+  }
+];
+
+function initCareerSlideshow() {
+  const displayCard = document.getElementById('slideshowDisplayCard');
+  const counterBadge = document.getElementById('slideCounterBadge');
+  const progressFill = document.getElementById('slideProgressFill');
+  const dotsStrip = document.getElementById('slideDotsStrip');
+  const prevBtn = document.getElementById('slidePrevBtn');
+  const nextBtn = document.getElementById('slideNextBtn');
+  const playPauseBtn = document.getElementById('slidePlayPauseBtn');
+  const slideshowWrap = document.getElementById('careerSlideshow');
+
+  if (!displayCard || !counterBadge) return;
+
+  let currentIndex = 0;
+  let isPlaying = true;
+  let slideInterval = null;
+  let progressInterval = null;
+  const slideDuration = 4500; // ms
+  const updateStep = 50; // ms
+  let elapsed = 0;
+
+  // Generate pagination dots
+  if (dotsStrip) {
+    dotsStrip.innerHTML = careerSlidesData.map((_, i) => `
+      <div class="slide-dot ${i === 0 ? 'active' : ''}" data-dot-index="${i}" title="Slide ${i + 1}"></div>
+    `).join('');
+
+    const dots = dotsStrip.querySelectorAll('.slide-dot');
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const targetIdx = parseInt(dot.getAttribute('data-dot-index'), 10);
+        goToSlide(targetIdx);
+      });
+    });
+  }
+
+  // Render initial slide
+  renderSlide(currentIndex);
+  startAutoPlay();
+
+  // Navigation Buttons
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      prevSlide();
+      resetProgress();
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      nextSlide();
+      resetProgress();
+    });
+  }
+
+  if (playPauseBtn) {
+    playPauseBtn.addEventListener('click', () => {
+      isPlaying = !isPlaying;
+      const icon = playPauseBtn.querySelector('i');
+      if (isPlaying) {
+        if (icon) icon.className = 'fa-solid fa-pause';
+        startAutoPlay();
+      } else {
+        if (icon) icon.className = 'fa-solid fa-play';
+        stopAutoPlay();
+      }
+    });
+  }
+
+  // Pause on hover
+  if (slideshowWrap) {
+    slideshowWrap.addEventListener('mouseenter', () => {
+      if (isPlaying) stopAutoPlay();
+    });
+    slideshowWrap.addEventListener('mouseleave', () => {
+      if (isPlaying) startAutoPlay();
+    });
+  }
+
+  function renderSlide(index) {
+    const slide = careerSlidesData[index];
+    const total = careerSlidesData.length;
+    const numStr = (index + 1 < 10 ? '0' : '') + (index + 1);
+    const totalStr = (total < 10 ? '0' : '') + total;
+
+    counterBadge.textContent = `Slide ${numStr} / ${totalStr}`;
+
+    displayCard.innerHTML = `
+      <div class="slide-content-container">
+        <div>
+          <div class="slide-vessel-meta">
+            <span class="slide-category-tag">${slide.category}</span>
+            <span style="font-size: 1.1rem;">${slide.flag}</span>
+          </div>
+
+          <h2 class="slide-vessel-title">${slide.title}</h2>
+
+          <div class="slide-telemetry-strip">
+            <span><i class="fa-solid fa-fingerprint"></i> IMO: ${slide.imo}</span>
+            <span>•</span>
+            <span><i class="fa-solid fa-weight-hanging"></i> Summer Deadweight: ${slide.dwt}</span>
+          </div>
+
+          <p class="slide-desc-text">${slide.desc}</p>
+
+          <div class="slide-actions-row">
+            <button class="btn-primary slide-learn-more-btn" data-slide-index="${index}">
+              <i class="fa-solid fa-circle-info"></i>
+              <span>Learn More</span>
+            </button>
+            <a href="#fleet" class="btn-secondary">
+              <i class="fa-solid fa-ship"></i>
+              <span>View In Full Fleet Directory</span>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="slide-tech-card">
+            <div class="slide-tech-item">
+              <span class="slide-tech-label">Operator / Line:</span>
+              <span class="slide-tech-val">${slide.operator}</span>
+            </div>
+            <div class="slide-tech-item">
+              <span class="slide-tech-label">Rank / Command:</span>
+              <span class="slide-tech-val" style="color: var(--accent-cyan);">${slide.rank}</span>
+            </div>
+            <div class="slide-tech-item">
+              <span class="slide-tech-label">Classification:</span>
+              <span class="slide-tech-val">${slide.category}</span>
+            </div>
+            <div class="slide-tech-item">
+              <span class="slide-tech-label">Safety Benchmark:</span>
+              <span class="slide-tech-val" style="color: var(--accent-emerald);">Zero Lost-Time Incidents</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+
+    // Update active dot
+    if (dotsStrip) {
+      const dots = dotsStrip.querySelectorAll('.slide-dot');
+      dots.forEach((d, i) => {
+        if (i === index) d.classList.add('active');
+        else d.classList.remove('active');
+      });
+    }
+
+    // Attach Learn More button click to open modal
+    const learnMoreBtn = displayCard.querySelector('.slide-learn-more-btn');
+    if (learnMoreBtn) {
+      learnMoreBtn.addEventListener('click', () => {
+        openSlideVesselModal(slide);
+      });
+    }
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % careerSlidesData.length;
+    renderSlide(currentIndex);
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + careerSlidesData.length) % careerSlidesData.length;
+    renderSlide(currentIndex);
+  }
+
+  function goToSlide(idx) {
+    currentIndex = idx;
+    renderSlide(currentIndex);
+    resetProgress();
+  }
+
+  function startAutoPlay() {
+    stopAutoPlay();
+    progressInterval = setInterval(() => {
+      elapsed += updateStep;
+      const progressPercent = Math.min((elapsed / slideDuration) * 100, 100);
+      if (progressFill) progressFill.style.width = `${progressPercent}%`;
+
+      if (elapsed >= slideDuration) {
+        elapsed = 0;
+        nextSlide();
+      }
+    }, updateStep);
+  }
+
+  function stopAutoPlay() {
+    if (progressInterval) clearInterval(progressInterval);
+    progressInterval = null;
+  }
+
+  function resetProgress() {
+    elapsed = 0;
+    if (progressFill) progressFill.style.width = '0%';
+  }
+
+  function openSlideVesselModal(slide) {
+    const modal = document.getElementById('vesselModal');
+    const modalContent = document.getElementById('modalContent');
+    if (!modal || !modalContent) return;
+
+    modalContent.innerHTML = `
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+        <span class="vessel-type-pill">${slide.category}</span>
+        <span class="vessel-flag">${slide.flag}</span>
+      </div>
+
+      <h2 style="font-size: 1.8rem; margin-bottom: 6px; color: var(--text-primary);">${slide.title}</h2>
+      <div style="font-family: var(--font-mono); font-size: 0.9rem; color: var(--accent-gold); margin-bottom: 20px;">
+        IMO: ${slide.imo} • Summer Deadweight: ${slide.dwt}
+      </div>
+
+      <div style="background: rgba(0, 229, 255, 0.05); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 18px; margin-bottom: 20px;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+          <div>
+            <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted);">Operating Line / Owner</div>
+            <div style="font-weight: 700; color: var(--text-primary); font-size: 0.95rem;">${slide.operator}</div>
+          </div>
+          <div>
+            <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted);">Command Role</div>
+            <div style="font-weight: 700; color: var(--accent-cyan); font-size: 0.95rem;">${slide.rank}</div>
+          </div>
+        </div>
+      </div>
+
+      <h4 style="font-size: 1.05rem; margin-bottom: 8px; color: var(--accent-cyan);">Operational Overview</h4>
+      <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.65; margin-bottom: 18px;">
+        ${slide.desc}
+      </p>
+
+      <div style="display: flex; gap: 12px; justify-content: flex-end; margin-top: 24px;">
+        <a href="#contact" class="btn-primary" onclick="document.getElementById('vesselModal').classList.remove('active');">
+          <i class="fa-solid fa-paper-plane"></i>
+          <span>Inquire Concerning Similar Operations</span>
+        </a>
+      </div>
+    `;
+
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
   }
 }
 
