@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Profile | Steve Johnson Integrated Services Ltd.</title>
+  
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="Company Profile | Steve Johnson Integrated Services Ltd.">
+  <meta name="description" content="Delivering safe, compliant, and high-reliability marine and offshore operations. Specialist marine assurance, SIRE 2.0 readiness, FSO/FPSO advisory, and flag-state nautical inspection support.">
+  <meta name="keywords" content="Steve Johnson Integrated Services Ltd, Marine Assurance, SIRE 2.0 Readiness, FSO FPSO Operations Advisory, RMI Flag-State Inspector, Mooring Master, Offshore Emergency Management">
+  <meta name="author" content="Capt. Steve Sandina Johnson">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://stevejohnsonmaritime.com/company-profile.html">
+  <meta property="og:title" content="Company Profile | Steve Johnson Integrated Services Ltd.">
+  <meta property="og:description" content="Delivering safe, compliant, and high-reliability marine and offshore operations worldwide.">
+  <meta property="og:image" content="assets/images/hero_vlcc.jpg">
+
+  <!-- Google Fonts & Font Awesome CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/images/logo.jpg">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .cp-hero {
+      position: relative;
+      min-height: 55vh;
+      padding-top: calc(var(--header-height) + 50px);
+      padding-bottom: 50px;
+      display: flex;
+      align-items: center;
+      background: 
+        linear-gradient(to right, rgba(4, 13, 26, 0.95) 0%, rgba(4, 13, 26, 0.85) 50%, rgba(4, 13, 26, 0.95) 100%),
+        url('assets/images/lng_carrier.jpg') center/cover no-repeat;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    [data-theme="light"] .cp-hero {
+      background: 
+        linear-gradient(to right, rgba(248, 250, 252, 0.96) 0%, rgba(248, 250, 252, 0.88) 50%, rgba(248, 250, 252, 0.96) 100%),
+        url('assets/images/lng_carrier.jpg') center/cover no-repeat;
+    }
+
+    .cp-values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin-top: 36px;
+    }
+
+    .cp-value-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 20px 16px;
+      text-align: center;
+      transition: all var(--transition-normal);
+    }
+
+    .cp-value-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent-cyan);
+      box-shadow: var(--shadow-md), 0 0 15px rgba(0, 229, 255, 0.15);
+    }
+
+    .cp-value-icon {
+      font-size: 1.5rem;
+      color: var(--accent-cyan);
+      margin-bottom: 10px;
+    }
+
+    .cp-value-title {
+      font-family: var(--font-heading);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .cp-vm-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-top: 40px;
+    }
+
+    .cp-vm-card {
+      background: var(--grad-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 34px 28px;
+      backdrop-filter: blur(16px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cp-vm-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: var(--grad-cyan);
+    }
+
+    .cp-vm-card.gold-card::before {
+      background: var(--grad-gold);
+    }
+
+    .cp-vm-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-md);
+      background: rgba(0, 229, 255, 0.12);
+      color: var(--accent-cyan);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.35rem;
+      margin-bottom: 18px;
+    }
+
+    .gold-card .cp-vm-icon {
+      background: rgba(245, 158, 11, 0.12);
+      color: var(--accent-gold);
+    }
+
+    .cp-vm-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+    }
+
+    .cp-vm-card p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .why-us-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 16px;
+      margin-top: 36px;
+    }
+
+    .why-us-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      transition: all var(--transition-fast);
+    }
+
+    .why-us-item:hover {
+      border-color: var(--accent-cyan);
+      transform: translateX(4px);
+      background: var(--bg-card-hover);
+    }
+
+    .why-us-check {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: var(--accent-emerald);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+
+    .why-us-text {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    @media (max-width: 768px) {
+      .cp-vm-grid {
+        grid-template-columns: 1fr;
+      }
+      .why-us-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html#home" class="brand-logo">
+        <img src="assets/images/logo.jpg" alt="Steve Johnson Maritime Logo" class="brand-img">
+        <div class="brand-text">
+          <span class="brand-title">Steve Johnson</span>
+          <span class="brand-sub">Maritime Advisory</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html#home" class="nav-link">Home</a></li>
+        <li><a href="index.html#certified-by" class="nav-link">Certified By</a></li>
+        <li><a href="index.html#about" class="nav-link">About Me</a></li>
+        <li><a href="index.html#services" class="nav-link">Services</a></li>
+        <li><a href="index.html#fleet" class="nav-link">Fleet</a></li>
+        <li><a href="index.html#credentials" class="nav-link">Credentials</a></li>
+        <li><a href="company-profile.html" class="nav-link active">Company Profile</a></li>
+        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Color Theme" title="Toggle Light/Dark Theme">
+          <i class="fa-solid fa-sun" id="themeIcon"></i>
+        </button>
+        <a href="index.html#contact" class="btn-primary">
+          <i class="fa-solid fa-calendar-check"></i>
+          <span>Consultation</span>
+        </a>
+        <button class="mobile-toggle-btn" id="mobileMenuBtn" aria-label="Open Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Company Profile Hero Header -->
+    <section class="cp-hero">
+      <div class="container">
+        <span class="section-tag"><i class="fa-solid fa-building-shield"></i> Corporate Assurance & Advisory</span>
+        <h1 class="hero-title" style="margin-top: 10px; margin-bottom: 12px;">
+          STEVE JOHNSON INTEGRATED SERVICES LTD.
+        </h1>
+        <p class="hero-role" style="color: var(--accent-cyan); font-size: 1.15rem; margin-bottom: 16px;">
+          Delivering safe, compliant, and high‑reliability marine and offshore operations.
+        </p>
+        <p class="hero-description" style="max-width: 750px;">
+          A specialist marine and offshore consulting firm providing high-level marine assurance, regulatory compliance support, and operational advisory services to vessel operators, offshore energy companies, and maritime organizations worldwide.
+        </p>
+        
+        <div style="display: flex; gap: 14px; margin-top: 24px; flex-wrap: wrap;">
+          <a href="#core-services" class="btn-primary">
+            <i class="fa-solid fa-compass"></i>
+            <span>Explore Core Capabilities</span>
+          </a>
+          <a href="index.html#contact" class="btn-gold">
+            <i class="fa-solid fa-paper-plane"></i>
+            <span>Retain Advisory Services</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Executive Summary & Leadership -->
+    <section style="padding: 70px 0; background: var(--bg-secondary); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="about-grid">
+          <div>
+            <span class="section-tag"><i class="fa-solid fa-file-lines"></i> Executive Summary</span>
+            <h2 style="font-size: 2.2rem; margin-bottom: 18px;">World-Class Marine Assurance & Technical Precision</h2>
+            <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.7; margin-bottom: 16px;">
+              <strong>STEVE JOHNSON INTEGRATED SERVICES LTD.</strong> is a specialist marine and offshore consulting firm providing high‑level marine assurance, regulatory compliance support, and operational advisory services to vessel operators, offshore energy companies, and maritime organizations worldwide.
+            </p>
+            <p style="color: var(--text-secondary); font-size: 0.96rem; line-height: 1.7; margin-bottom: 16px;">
+              Led by <strong>Capt. Steve Johnson — Master Mariner (Unlimited), Offshore Installation Manager (OIM), and Flag-State Nautical Inspector (Republic of the Marshall Islands)</strong> — the company delivers expert oversight across FSO/FPSO operations, tanker vetting, SIRE 2.0 readiness, emergency management, and statutory compliance.
+            </p>
+            <p style="color: var(--text-secondary); font-size: 0.96rem; line-height: 1.7; margin-bottom: 24px;">
+              With 42+ years of global maritime experience, including command of VLCC-class offshore assets (ExxonMobil Yoho FSO) and extensive regulatory inspection work for the Republic of the Marshall Islands (RMI), the company offers unmatched operational insight, safety leadership, and digital assurance capability.
+            </p>
+
+            <div style="background: var(--bg-card); border-left: 4px solid var(--accent-cyan); padding: 16px 20px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; border: 1px solid var(--border-color); border-left-width: 4px;">
+              <p style="font-size: 0.92rem; color: var(--text-primary); font-weight: 600; margin-bottom: 0;">
+                <i class="fa-solid fa-quote-left" style="color: var(--accent-cyan); margin-right: 6px;"></i>
+                We help clients achieve safe operations, regulatory compliance, and operational excellence across high‑hazard marine and offshore environments.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <div class="about-main-img" style="height: auto;">
+              <img src="assets/images/bridge_command.jpg" alt="Marine Navigation Bridge Command Center" style="height: 380px; width: 100%; object-fit: cover;">
+            </div>
+          </div>
+        </div>
+
+        <!-- Vision & Mission -->
+        <div class="cp-vm-grid">
+          <div class="cp-vm-card">
+            <div class="cp-vm-icon"><i class="fa-solid fa-eye"></i></div>
+            <h3>Corporate Vision</h3>
+            <p>
+              To be a trusted global partner in marine assurance and offshore operational integrity, recognized for excellence, professionalism, and unwavering commitment to safety.
+            </p>
+          </div>
+
+          <div class="cp-vm-card gold-card">
+            <div class="cp-vm-icon"><i class="fa-solid fa-bullseye"></i></div>
+            <h3>Corporate Mission</h3>
+            <p>
+              To enhance marine and offshore operational safety through expert assurance, regulatory precision, and disciplined leadership – delivering reliable, compliant, and high‑performance outcomes for clients worldwide.
+            </p>
+          </div>
+        </div>
+
+        <!-- Company Values -->
+        <div style="margin-top: 50px;">
+          <div style="text-align: center;">
+            <span class="section-tag"><i class="fa-solid fa-gem"></i> Fundamental Principles</span>
+            <h3 style="font-size: 1.8rem;">Our Core Company Values</h3>
+          </div>
+
+          <div class="cp-values-grid">
+            <div class="cp-value-card">
+              <div class="cp-value-icon"><i class="fa-solid fa-shield-halved"></i></div>
+              <div class="cp-value-title">Safety First</div>
+            </div>
+
+            <div class="cp-value-card">
+              <div class="cp-value-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+              <div class="cp-value-title">Integrity Always</div>
+            </div>
+
+            <div class="cp-value-card">
+              <div class="cp-value-icon"><i class="fa-solid fa-anchor"></i></div>
+              <div class="cp-value-title">Operational Discipline</div>
+            </div>
+
+            <div class="cp-value-card">
+              <div class="cp-value-icon"><i class="fa-solid fa-award"></i></div>
+              <div class="cp-value-title">Regulatory Excellence</div>
+            </div>
+
+            <div class="cp-value-card">
+              <div class="cp-value-icon"><i class="fa-solid fa-chart-line"></i></div>
+              <div class="cp-value-title">Continuous Improvement</div>
+            </div>
+
+            <div class="cp-value-card">
+              <div class="cp-value-icon"><i class="fa-solid fa-user-tie"></i></div>
+              <div class="cp-value-title">Professional Leadership</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Corporate Services -->
+    <section id="core-services">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-gears"></i> Advisory & Assurance Capabilities</span>
+          <h2 class="section-title">Core Specialized Services</h2>
+          <p class="section-subtitle">
+            Comprehensive marine assurance, compliance frameworks, and high-reliability operational solutions tailored for energy operators, tanker fleets, and offshore asset holders.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service 1 -->
+          <div class="service-card">
+            <div class="service-icon-box"><i class="fa-solid fa-flag"></i></div>
+            <h3>Flag-State & Regulatory Inspection Support</h3>
+            <p>Rigorous regulatory verification, statutory audits, and maritime authority liaison for international flag registries.</p>
+            <ul class="service-features-list">
+              <li><i class="fa-solid fa-check"></i> ISM / ISPS / MLC Audits</li>
+              <li><i class="fa-solid fa-check"></i> Statutory & Annual Inspections</li>
+              <li><i class="fa-solid fa-check"></i> Deficiency Close-Out & Root Cause Analysis</li>
+              <li><i class="fa-solid fa-check"></i> Regulatory Compliance Advisory</li>
+              <li><i class="fa-solid fa-check"></i> Pre-Registration Inspection Readiness</li>
+            </ul>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-card">
+            <div class="service-icon-box"><i class="fa-solid fa-clipboard-check"></i></div>
+            <h3>Marine Assurance & SIRE 2.0 Readiness</h3>
+            <p>Digital vetting protocols, risk-based inspection frameworks, and evidence gathering aligned with OCIMF standards.</p>
+            <ul class="service-features-list">
+              <li><i class="fa-solid fa-check"></i> Pre-Vetting Gap Analysis & Inspections</li>
+              <li><i class="fa-solid fa-check"></i> Digital Assurance Systems Implementation</li>
+              <li><i class="fa-solid fa-check"></i> Evidence-Based Technical Reporting</li>
+              <li><i class="fa-solid fa-check"></i> Crew Competency Evaluation</li>
+              <li><i class="fa-solid fa-check"></i> Operational Readiness Assessments</li>
+            </ul>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-card">
+            <div class="service-icon-box"><i class="fa-solid fa-oil-well"></i></div>
+            <h3>FSO / FPSO Marine Operations Advisory</h3>
+            <p>Deep operational expertise across 276,000+ DWT floating production and storage facilities in open waters.</p>
+            <ul class="service-features-list">
+              <li><i class="fa-solid fa-check"></i> Tandem Mooring Oversight & Berthing</li>
+              <li><i class="fa-solid fa-check"></i> Floating Hose & Hawser Management</li>
+              <li><i class="fa-solid fa-check"></i> High-Volume Crude Cargo Export Operations</li>
+              <li><i class="fa-solid fa-check"></i> Ship/Terminal Interface Safety Verification</li>
+              <li><i class="fa-solid fa-check"></i> Mooring Integrity & DCS Overviews</li>
+            </ul>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="service-card">
+            <div class="service-icon-box"><i class="fa-solid fa-triangle-exclamation"></i></div>
+            <h3>Offshore Emergency Management</h3>
+            <p>Crisis command frameworks, major emergency drills, and barrier verification based on Falck Nutec MEMIR benchmarks.</p>
+            <ul class="service-features-list">
+              <li><i class="fa-solid fa-check"></i> Major Emergency Response Drills (MEMIR)</li>
+              <li><i class="fa-solid fa-check"></i> Scenario-Based Simulation Training</li>
+              <li><i class="fa-solid fa-check"></i> High-Reliability HSSEQ Culture Development</li>
+              <li><i class="fa-solid fa-check"></i> Critical Barrier Integrity Verification</li>
+              <li><i class="fa-solid fa-check"></i> Contingency & Evacuation Planning</li>
+            </ul>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="service-card">
+            <div class="service-icon-box"><i class="fa-solid fa-link"></i></div>
+            <h3>Mooring Integrity & Terminal Operations</h3>
+            <p>Advanced SPM, SBM, and tandem mooring strategies ensuring zero breakaways and maximum berthing reliability.</p>
+            <ul class="service-features-list">
+              <li><i class="fa-solid fa-check"></i> Pick-Up Rope & Hawser Integrity Systems</li>
+              <li><i class="fa-solid fa-check"></i> SBM / SPM Offloading Operations</li>
+              <li><i class="fa-solid fa-check"></i> Export Tanker Berthing Supervision</li>
+              <li><i class="fa-solid fa-check"></i> Quantitative Environmental Risk Assessments</li>
+              <li><i class="fa-solid fa-check"></i> Operational Discipline Reinforcement</li>
+            </ul>
+          </div>
+
+          <!-- Service 6 -->
+          <div class="service-card">
+            <div class="service-icon-box"><i class="fa-solid fa-chalkboard-user"></i></div>
+            <h3>Crew Competency & Leadership Development</h3>
+            <p>Transformative mentorship and human-factor coaching for bridge teams, marine superintendents, and OIM candidates.</p>
+            <ul class="service-features-list">
+              <li><i class="fa-solid fa-check"></i> Executive Training & Mentoring Programs</li>
+              <li><i class="fa-solid fa-check"></i> Maritime Safety Leadership Modules</li>
+              <li><i class="fa-solid fa-check"></i> Operational Discipline Coaching</li>
+              <li><i class="fa-solid fa-check"></i> Bridge & Deck Team Coordination (BRM)</li>
+              <li><i class="fa-solid fa-check"></i> Simulator Training Assessment</li>
+            </ul>
+          </div>
+
+          <!-- Service 7 -->
+          <div class="service-card">
+            <div class="service-icon-box"><i class="fa-solid fa-microchip"></i></div>
+            <h3>Digital Marine Assurance & AI-Enabled Reporting</h3>
+            <p>Modernized vessel vetting with digital checklists, machine-assisted data logging, and predictive operational insights.</p>
+            <ul class="service-features-list">
+              <li><i class="fa-solid fa-check"></i> Digital Inspection Checklists & Protocols</li>
+              <li><i class="fa-solid fa-check"></i> AI-Supported Decision Support Tools</li>
+              <li><i class="fa-solid fa-check"></i> Real-Time Data-Driven Reporting</li>
+              <li><i class="fa-solid fa-check"></i> Operational Fleet Analytics</li>
+              <li><i class="fa-solid fa-check"></i> Cloud-Integrated Documentation Archives</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Clients Choose Us -->
+    <section style="padding: 70px 0; background: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-trophy"></i> Competitive Advantage</span>
+          <h2 class="section-title">Why Clients Choose STEVE JOHNSON INTEGRATED SERVICES LTD.</h2>
+          <p class="section-subtitle">
+            Unsurpassed technical credibility, executive authority, and an uncompromising commitment to zero-incident operations.
+          </p>
+        </div>
+
+        <div class="why-us-list">
+          <div class="why-us-item">
+            <div class="why-us-check"><i class="fa-solid fa-check"></i></div>
+            <div class="why-us-text">42+ years of verified global maritime and offshore experience</div>
+          </div>
+
+          <div class="why-us-item">
+            <div class="why-us-check"><i class="fa-solid fa-check"></i></div>
+            <div class="why-us-text">Master Mariner (Unlimited STCW II/2) & OIM executive authority</div>
+          </div>
+
+          <div class="why-us-item">
+            <div class="why-us-check"><i class="fa-solid fa-check"></i></div>
+            <div class="why-us-text">Accredited Flag-State Nautical Inspector (Republic of the Marshall Islands)</div>
+          </div>
+
+          <div class="why-us-item">
+            <div class="why-us-check"><i class="fa-solid fa-check"></i></div>
+            <div class="why-us-text">Deep offshore asset expertise across FSO, FPSO, FLNG, and MODU units</div>
+          </div>
+
+          <div class="why-us-item">
+            <div class="why-us-check"><i class="fa-solid fa-check"></i></div>
+            <div class="why-us-text">Zero Lost-Time Incident (Zero LTI) exemplary career safety record</div>
+          </div>
+
+          <div class="why-us-item">
+            <div class="why-us-check"><i class="fa-solid fa-check"></i></div>
+            <div class="why-us-text">Robust HSSEQ culture and MEMIR major emergency management mastery</div>
+          </div>
+
+          <div class="why-us-item">
+            <div class="why-us-check"><i class="fa-solid fa-check"></i></div>
+            <div class="why-us-text">Advanced digital assurance tools and SIRE 2.0 inspection proficiency</div>
+          </div>
+
+          <div class="why-us-item">
+            <div class="why-us-check"><i class="fa-solid fa-check"></i></div>
+            <div class="why-us-text">Uncompromising integrity, professionalism, and operational discipline</div>
+          </div>
+
+          <div class="why-us-item">
+            <div class="why-us-check"><i class="fa-solid fa-check"></i></div>
+            <div class="why-us-text">20-Year proven tenure with ExxonMobil and Tier-1 international operators</div>
+          </div>
+        </div>
+
+        <!-- Corporate CTA Banner -->
+        <div style="margin-top: 50px; background: var(--grad-card); border: 1px solid var(--border-hover); border-radius: var(--radius-lg); padding: 40px; text-align: center; box-shadow: var(--shadow-lg);">
+          <h3 style="font-size: 1.8rem; margin-bottom: 12px; color: var(--text-primary);">Ready to Elevate Your Marine Operational Assurance?</h3>
+          <p style="color: var(--text-secondary); max-width: 650px; margin: 0 auto 24px; font-size: 0.95rem;">
+            Contact STEVE JOHNSON INTEGRATED SERVICES LTD. today to arrange flag-state inspections, SIRE 2.0 pre-vetting, or dedicated offshore terminal advisory.
+          </p>
+          <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
+            <a href="index.html#contact" class="btn-primary">
+              <i class="fa-solid fa-envelope-open-text"></i>
+              <span>Submit Project Brief</span>
+            </a>
+            <a href="https://wa.me/2348066482498" target="_blank" rel="noopener noreferrer" class="btn-gold">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span>Direct WhatsApp Channel</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- WhatsApp Floating Action -->
+  <a href="https://wa.me/2348066482498" target="_blank" rel="noopener noreferrer" class="floating-whatsapp" title="Chat with Capt. Steve Johnson on WhatsApp" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <img src="assets/images/logo.jpg" alt="Steve Johnson Maritime Logo" class="brand-img">
+            <div class="brand-text">
+              <span class="brand-title">Steve Johnson</span>
+              <span class="brand-sub">Integrated Services Ltd.</span>
+            </div>
+          </div>
+          <p>
+            Master Mariner, Offshore Installation Manager & Flag State Nautical Inspector with 42+ years of global maritime excellence.
+          </p>
+          <div class="social-links">
+            <a href="https://ng.bold.pro/my/captainstevesandinajohnson" target="_blank" rel="noopener noreferrer" class="social-link" title="Bold.pro Portfolio"><i class="fa-solid fa-user-tie"></i></a>
+            <a href="https://wa.me/2348066482498" target="_blank" rel="noopener noreferrer" class="social-link" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="mailto:sandinajohnson97@gmail.com" class="social-link" title="Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="tel:+2348066482498" class="social-link" title="Call"><i class="fa-solid fa-phone"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About Captain Steve</a></li>
+            <li><a href="index.html#services">Specialized Services</a></li>
+            <li><a href="index.html#fleet">Fleet & Commands</a></li>
+            <li><a href="company-profile.html">Company Profile</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Core Assurance</h4>
+          <ul class="footer-links">
+            <li><a href="company-profile.html#core-services">Flag-State Inspections (RMI)</a></li>
+            <li><a href="company-profile.html#core-services">SIRE 2.0 Tanker Readiness</a></li>
+            <li><a href="company-profile.html#core-services">FSO / FPSO Operations</a></li>
+            <li><a href="company-profile.html#core-services">Major Emergency Drills</a></li>
+            <li><a href="company-profile.html#core-services">Digital Marine Assurance</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Corporate Headquarters</h4>
+          <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; margin-bottom: 12px;">
+            <i class="fa-solid fa-location-dot" style="color: var(--accent-cyan); margin-right: 8px;"></i>
+            Steve Johnson Integrated Services Ltd.<br>Nigeria • Global Maritime Operations
+          </p>
+          <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; margin-bottom: 8px;">
+            <i class="fa-solid fa-phone" style="color: var(--accent-cyan); margin-right: 8px;"></i>
+            <a href="tel:+2348066482498" style="color: inherit;">+234 806 648 2498</a>
+          </p>
+          <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6;">
+            <i class="fa-solid fa-envelope" style="color: var(--accent-cyan); margin-right: 8px;"></i>
+            <a href="mailto:sandinajohnson97@gmail.com" style="color: inherit;">sandinajohnson97@gmail.com</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 STEVE JOHNSON INTEGRATED SERVICES LTD. All Rights Reserved.
+        </div>
+        <div style="display: flex; gap: 20px;">
+          <a href="index.html#home" style="color: inherit;">Home</a>
+          <a href="company-profile.html" style="color: var(--accent-cyan);">Company Profile</a>
+          <a href="index.html#contact" style="color: inherit;">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Theme and Navigation Script -->
+  <script>
+    const root = document.documentElement;
+    const themeToggleBtn = document.getElementById('themeToggleBtn');
+    const themeIcon = document.getElementById('themeIcon');
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const navMenu = document.getElementById('navMenu');
+    const navbar = document.getElementById('navbar');
+
+    const savedTheme = localStorage.getItem('sjm_theme') || 'dark';
+    setTheme(savedTheme);
+
+    if (themeToggleBtn) {
+      themeToggleBtn.addEventListener('click', () => {
+        const currentTheme = root.getAttribute('data-theme') || 'dark';
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        setTheme(newTheme);
+      });
+    }
+
+    function setTheme(theme) {
+      root.setAttribute('data-theme', theme);
+      localStorage.setItem('sjm_theme', theme);
+      if (themeIcon) {
+        themeIcon.className = theme === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+      }
+    }
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) navbar.classList.add('scrolled');
+      else navbar.classList.remove('scrolled');
+    });
+
+    if (mobileBtn && navMenu) {
+      mobileBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('mobile-open');
+        const icon = mobileBtn.querySelector('i');
+        if (icon) {
+          icon.classList.toggle('fa-bars');
+          icon.classList.toggle('fa-xmark');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
