@@ -2385,3 +2385,108 @@ textarea.form-control {
     grid-template-columns: 1fr;
   }
 }
+
+/* ==========================================================================
+   FAQ ACCORDION SECTION (SEO & RICH SNIPPETS)
+   ========================================================================== */
+
+.faq-section {
+  background: var(--bg-primary);
+  position: relative;
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 36px;
+}
+
+.faq-item {
+  background: var(--grad-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  backdrop-filter: blur(12px);
+}
+
+.faq-item:hover {
+  border-color: rgba(0, 229, 255, 0.4);
+}
+
+.faq-item.active {
+  border-color: var(--accent-cyan);
+  box-shadow: 0 4px 20px rgba(0, 229, 255, 0.12);
+}
+
+.faq-question-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+  gap: 16px;
+  transition: color var(--transition-fast);
+}
+
+.faq-question-btn:hover {
+  color: var(--accent-cyan);
+}
+
+.faq-item.active .faq-question-btn {
+  color: var(--accent-cyan);
+}
+
+.faq-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-full);
+  background: rgba(0, 229, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-cyan);
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  transition: transform var(--transition-normal), background var(--transition-fast);
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+  background: var(--accent-cyan);
+  color: #040d1a;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), padding 0.35s ease;
+  padding: 0 24px;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 400px;
+  padding: 0 24px 22px;
+}
+
+.faq-answer p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 0;
+}
+

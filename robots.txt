@@ -1,0 +1,10 @@
+# Steve Johnson Maritime - robots.txt
+# https://stevejohnsonmaritime.com/
+
+User-agent: *
+Allow: /
+Allow: /assets/
+Allow: /company-profile.html
+
+# Sitemap Location
+Sitemap: https://stevejohnsonmaritime.com/sitemap.xml

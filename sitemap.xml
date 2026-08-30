@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Main Portfolio Homepage -->
+  <url>
+    <loc>https://stevejohnsonmaritime.com/</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://stevejohnsonmaritime.com/assets/images/captain_steve_johnson.webp</image:loc>
+      <image:title>Capt. Steve Sandina Johnson - Master Mariner &amp; Mooring Master</image:title>
+      <image:caption>Captain Steve Sandina Johnson, Master Mariner (STCW II/2 Unlimited), Mooring Master, and Flag State Nautical Inspector.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://stevejohnsonmaritime.com/assets/images/hero_vlcc.jpg</image:loc>
+      <image:title>VLCC Supertanker &amp; Offshore Terminal Operations</image:title>
+      <image:caption>VLCC Tandem Mooring and Offshore Marine Command Operations.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://stevejohnsonmaritime.com/assets/images/bridge_command.jpg</image:loc>
+      <image:title>Maritime Navigation Bridge Command</image:title>
+      <image:caption>Modern ship bridge navigation and offshore command center.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://stevejohnsonmaritime.com/assets/images/inspection_deck.jpg</image:loc>
+      <image:title>Flag State Nautical Vessel Inspection</image:title>
+      <image:caption>Republic of Marshall Islands Nautical Inspections and SIRE 2.0 Audits.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Corporate Profile Page -->
+  <url>
+    <loc>https://stevejohnsonmaritime.com/company-profile.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://stevejohnsonmaritime.com/assets/images/lng_carrier.jpg</image:loc>
+      <image:title>Steve Johnson Integrated Services - LNG Carrier &amp; Offshore Marine Advisory</image:title>
+      <image:caption>Steve Johnson Integrated Services Ltd corporate marine assurance, SIRE 2.0 readiness, and offshore operations.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://stevejohnsonmaritime.com/assets/images/logo.jpg</image:loc>
+      <image:title>Steve Johnson Maritime Logo</image:title>
+      <image:caption>Official insignia of Steve Johnson Maritime Advisory &amp; Integrated Services.</image:caption>
+    </image:image>
+  </url>
+
+</urlset>
