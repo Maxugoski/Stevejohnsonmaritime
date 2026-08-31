@@ -28,6 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 8. Consultation Form Handler
   initConsultationForm();
+
+  // 9. FAQ Accordion Handler
+  initFaqAccordion();
 });
 
 /* ==========================================================================
@@ -1296,3 +1299,39 @@ function initConsultationForm() {
     }
   });
 }
+
+/* ==========================================================================
+   FAQ ACCORDION INTERACTION (SEO RICH RESULTS)
+   ========================================================================== */
+function initFaqAccordion() {
+  const faqItems = document.querySelectorAll('.faq-item');
+  if (!faqItems.length) return;
+
+  faqItems.forEach(item => {
+    const btn = item.querySelector('.faq-question-btn');
+    if (!btn) return;
+
+    btn.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+      
+      // Close other open items
+      faqItems.forEach(otherItem => {
+        if (otherItem !== item) {
+          otherItem.classList.remove('active');
+          const otherBtn = otherItem.querySelector('.faq-question-btn');
+          if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // Toggle current item
+      if (isActive) {
+        item.classList.remove('active');
+        btn.setAttribute('aria-expanded', 'false');
+      } else {
+        item.classList.add('active');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+}
+
