@@ -2490,3 +2490,106 @@ textarea.form-control {
   margin: 0;
 }
 
+/* ==========================================================================
+   EXECUTIVE RECOMMENDATIONS & ENDORSEMENTS SECTION
+   ========================================================================== */
+
+.recommendations-section {
+  background: var(--bg-secondary);
+  position: relative;
+}
+
+.recommendations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.recommendation-card {
+  background: var(--grad-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  backdrop-filter: blur(14px);
+  position: relative;
+  transition: all var(--transition-normal);
+}
+
+.recommendation-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent-gold);
+  box-shadow: 0 12px 30px rgba(245, 158, 11, 0.15);
+}
+
+.rec-quote-icon {
+  font-size: 2rem;
+  color: var(--accent-gold);
+  opacity: 0.4;
+  margin-bottom: 16px;
+}
+
+.rec-text {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.rec-author-wrap {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border-color);
+}
+
+.rec-author-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(0, 229, 255, 0.12);
+  border: 2px solid var(--accent-cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: var(--accent-cyan);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.rec-author-info h4 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.rec-author-info p {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.3;
+}
+
+.rec-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  color: var(--accent-gold);
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  align-self: flex-start;
+}
+
+
