@@ -546,7 +546,7 @@ function initCareerSlideshow() {
             </div>
             <div class="slide-tech-item">
               <span class="slide-tech-label">Command Role:</span>
-              <span class="slide-tech-val" style="color: var(--accent-cyan);">${slide.rank}</span>
+              <span class="slide-tech-val" style="color: var(--accent-gold-light); font-weight: 600;">${slide.rank}</span>
             </div>
             <div class="slide-tech-item">
               <span class="slide-tech-label">Safety Benchmark:</span>
@@ -648,21 +648,21 @@ function initCareerSlideshow() {
         IMO: ${slide.imo} • Summer Deadweight: ${slide.dwt}
       </div>
 
-      <div style="background: rgba(0, 229, 255, 0.05); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 18px; margin-bottom: 20px;">
+      <div style="background: rgba(197, 168, 128, 0.08); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 18px; margin-bottom: 20px;">
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
           <div>
-            <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted);">Operating Line / Owner</div>
-            <div style="font-weight: 700; color: var(--text-primary); font-size: 0.95rem;">${slide.operator}</div>
+            <div style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted);">Operating Line / Owner</div>
+            <div style="font-weight: 700; color: var(--text-primary); font-size: 0.95rem; font-family: var(--font-heading);">${slide.operator}</div>
           </div>
           <div>
-            <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted);">Command Role</div>
-            <div style="font-weight: 700; color: var(--accent-cyan); font-size: 0.95rem;">${slide.rank}</div>
+            <div style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted);">Command Role</div>
+            <div style="font-weight: 700; color: var(--accent-gold-light); font-size: 0.95rem;">${slide.rank}</div>
           </div>
         </div>
       </div>
 
-      <h4 style="font-size: 1.05rem; margin-bottom: 8px; color: var(--accent-cyan);">Operational Overview</h4>
-      <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.65; margin-bottom: 18px;">
+      <h4 style="font-size: 1.15rem; margin-bottom: 8px; color: var(--accent-gold-light); font-family: var(--font-heading);">Operational Overview</h4>
+      <p style="color: var(--text-secondary); font-size: 0.94rem; line-height: 1.8; margin-bottom: 18px; font-weight: 300;">
         ${slide.desc}
       </p>
 
@@ -1058,26 +1058,26 @@ function initFleetGallery() {
         IMO: ${vessel.imo} • Summer Deadweight: ${vessel.dwt}
       </div>
 
-      <div style="background: rgba(0, 229, 255, 0.05); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 18px; margin-bottom: 20px;">
+      <div style="background: rgba(197, 168, 128, 0.08); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 18px; margin-bottom: 20px;">
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
           <div>
-            <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted);">Operating Line / Owner</div>
-            <div style="font-weight: 700; color: var(--text-primary); font-size: 0.95rem;">${vessel.operator}</div>
+            <div style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted);">Operating Line / Owner</div>
+            <div style="font-weight: 700; color: var(--text-primary); font-size: 0.95rem; font-family: var(--font-heading);">${vessel.operator}</div>
           </div>
           <div>
-            <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted);">Command Role & Period</div>
-            <div style="font-weight: 700; color: var(--accent-cyan); font-size: 0.95rem;">${vessel.rank} (${vessel.period})</div>
+            <div style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted);">Command Role & Period</div>
+            <div style="font-weight: 700; color: var(--accent-gold-light); font-size: 0.95rem;">${vessel.rank} (${vessel.period})</div>
           </div>
         </div>
       </div>
 
-      <h4 style="font-size: 1.05rem; margin-bottom: 8px; color: var(--accent-cyan);">Operational Overview</h4>
-      <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.65; margin-bottom: 18px;">
+      <h4 style="font-size: 1.15rem; margin-bottom: 8px; color: var(--accent-gold-light); font-family: var(--font-heading);">Operational Overview</h4>
+      <p style="color: var(--text-secondary); font-size: 0.94rem; line-height: 1.8; margin-bottom: 18px; font-weight: 300;">
         ${vessel.description}
       </p>
 
-      <h4 style="font-size: 1.05rem; margin-bottom: 8px; color: var(--accent-cyan);">Technical & Leadership Highlights</h4>
-      <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.65; margin-bottom: 24px;">
+      <h4 style="font-size: 1.15rem; margin-bottom: 8px; color: var(--accent-gold-light); font-family: var(--font-heading);">Technical & Leadership Highlights</h4>
+      <p style="color: var(--text-secondary); font-size: 0.94rem; line-height: 1.8; margin-bottom: 24px; font-weight: 300;">
         ${vessel.details}
       </p>
 
@@ -1249,7 +1249,7 @@ function initCredentialsVault() {
           </div>
         </div>
 
-        <div style="font-family: var(--font-mono); font-size: 0.76rem; color: var(--accent-cyan); margin-bottom: 12px;">
+        <div style="font-family: var(--font-mono); font-size: 0.76rem; color: var(--accent-gold); margin-bottom: 12px;">
           <i class="fa-solid fa-clock-rotate-left"></i> ${item.year}
         </div>
 

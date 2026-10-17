@@ -51,10 +51,10 @@
   <meta name="twitter:image" content="https://stevejohnsonmaritime.com/assets/images/lng_carrier.jpg">
   <meta name="twitter:image:alt" content="Steve Johnson Integrated Services Ltd Marine Operations">
 
-  <!-- Preconnect & Fonts -->
+  <!-- Preconnect & Google Fonts (Shafer Luxury Editorial Typography) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Favicon -->
@@ -215,13 +215,13 @@
 
     .cp-value-card:hover {
       transform: translateY(-4px);
-      border-color: var(--accent-cyan);
-      box-shadow: var(--shadow-md), 0 0 15px rgba(0, 229, 255, 0.15);
+      border-color: var(--accent-gold);
+      box-shadow: var(--shadow-md), 0 0 20px rgba(var(--accent-gold-rgb), 0.2);
     }
 
     .cp-value-icon {
       font-size: 1.5rem;
-      color: var(--accent-cyan);
+      color: var(--accent-gold-light);
       margin-bottom: 10px;
     }
 
@@ -255,8 +255,8 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 4px;
-      background: var(--grad-cyan);
+      height: 3px;
+      background: var(--grad-gold);
     }
 
     .cp-vm-card.gold-card::before {
@@ -267,8 +267,9 @@
       width: 48px;
       height: 48px;
       border-radius: var(--radius-md);
-      background: rgba(0, 229, 255, 0.12);
-      color: var(--accent-cyan);
+      background: rgba(197, 168, 128, 0.12);
+      border: 1px solid rgba(197, 168, 128, 0.35);
+      color: var(--accent-gold-light);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -277,11 +278,12 @@
     }
 
     .gold-card .cp-vm-icon {
-      background: rgba(245, 158, 11, 0.12);
-      color: var(--accent-gold);
+      background: rgba(197, 168, 128, 0.18);
+      color: var(--accent-gold-light);
     }
 
     .cp-vm-card h3 {
+      font-family: var(--font-heading);
       font-size: 1.4rem;
       margin-bottom: 12px;
     }
@@ -289,7 +291,8 @@
     .cp-vm-card p {
       font-size: 0.95rem;
       color: var(--text-secondary);
-      line-height: 1.7;
+      line-height: 1.8;
+      font-weight: 300;
     }
 
     .why-us-list {
@@ -311,9 +314,10 @@
     }
 
     .why-us-item:hover {
-      border-color: var(--accent-cyan);
+      border-color: var(--accent-gold);
       transform: translateX(4px);
       background: var(--bg-card-hover);
+      box-shadow: 0 4px 16px rgba(var(--accent-gold-rgb), 0.15);
     }
 
     .why-us-check {
@@ -395,7 +399,7 @@
         <h1 class="hero-title" style="margin-top: 10px; margin-bottom: 12px;">
           STEVE JOHNSON INTEGRATED SERVICES LTD.
         </h1>
-        <p class="hero-role" style="color: var(--accent-cyan); font-size: 1.15rem; margin-bottom: 16px;">
+        <p class="hero-role" style="color: var(--accent-gold); font-size: 1.15rem; margin-bottom: 16px;">
           Delivering safe, compliant, and high‑reliability marine and offshore operations.
         </p>
         <p class="hero-description" style="max-width: 750px;">
@@ -421,7 +425,7 @@
         <div class="about-grid">
           <div>
             <span class="section-tag"><i class="fa-solid fa-file-lines"></i> Executive Summary</span>
-            <h2 style="font-size: 2.2rem; margin-bottom: 18px;">World-Class Marine Assurance & Technical Precision</h2>
+            <h2 style="font-size: 2.2rem; margin-bottom: 18px;">World-Class Marine Assurance & <span class="italic-serif">Technical Precision</span></h2>
             <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.7; margin-bottom: 16px;">
               <strong>STEVE JOHNSON INTEGRATED SERVICES LTD.</strong> is a specialist marine and offshore consulting firm providing high‑level marine assurance, regulatory compliance support, and operational advisory services to vessel operators, offshore energy companies, and maritime organizations worldwide.
             </p>
@@ -432,9 +436,9 @@
               With 42+ years of global maritime experience, including command of VLCC-class offshore assets (ExxonMobil Yoho FSO) and extensive regulatory inspection work for the Republic of the Marshall Islands (RMI), the company offers unmatched operational insight, safety leadership, and digital assurance capability.
             </p>
 
-            <div style="background: var(--bg-card); border-left: 4px solid var(--accent-cyan); padding: 16px 20px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; border: 1px solid var(--border-color); border-left-width: 4px;">
+            <div style="background: var(--bg-card); border-left: 4px solid var(--accent-gold); padding: 16px 20px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; border: 1px solid var(--border-color); border-left-width: 4px;">
               <p style="font-size: 0.92rem; color: var(--text-primary); font-weight: 600; margin-bottom: 0;">
-                <i class="fa-solid fa-quote-left" style="color: var(--accent-cyan); margin-right: 6px;"></i>
+                <i class="fa-solid fa-quote-left" style="color: var(--accent-gold); margin-right: 6px;"></i>
                 We help clients achieve safe operations, regulatory compliance, and operational excellence across high‑hazard marine and offshore environments.
               </p>
             </div>
@@ -753,15 +757,15 @@
         <div class="footer-col">
           <h4>Corporate Headquarters</h4>
           <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; margin-bottom: 12px;">
-            <i class="fa-solid fa-location-dot" style="color: var(--accent-cyan); margin-right: 8px;"></i>
+            <i class="fa-solid fa-location-dot" style="color: var(--accent-gold); margin-right: 8px;"></i>
             Steve Johnson Integrated Services Ltd.<br>Nigeria • Global Maritime Operations
           </p>
           <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; margin-bottom: 8px;">
-            <i class="fa-solid fa-phone" style="color: var(--accent-cyan); margin-right: 8px;"></i>
+            <i class="fa-solid fa-phone" style="color: var(--accent-gold); margin-right: 8px;"></i>
             <a href="tel:+2348066482498" style="color: inherit;">+234 806 648 2498</a>
           </p>
           <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6;">
-            <i class="fa-solid fa-envelope" style="color: var(--accent-cyan); margin-right: 8px;"></i>
+            <i class="fa-solid fa-envelope" style="color: var(--accent-gold); margin-right: 8px;"></i>
             <a href="mailto:sandinajohnson97@gmail.com" style="color: inherit;">sandinajohnson97@gmail.com</a>
           </p>
         </div>
@@ -773,7 +777,7 @@
         </div>
         <div style="display: flex; gap: 20px;">
           <a href="index.html#home" style="color: inherit;">Home</a>
-          <a href="company-profile.html" style="color: var(--accent-cyan);">Company Profile</a>
+          <a href="company-profile.html" style="color: var(--accent-gold);">Company Profile</a>
           <a href="index.html#contact" style="color: inherit;">Contact</a>
         </div>
       </div>
