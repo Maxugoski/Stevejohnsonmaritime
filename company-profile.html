@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,7 +23,7 @@
   <meta name="ICBM" content="6.5244, 3.3792">
 
   <!-- Theme & Mobile Web App Manifest -->
-  <meta name="theme-color" content="#040d1a">
+  <meta name="theme-color" content="#ffffff">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Steve Johnson Integrated Services">
@@ -180,21 +180,13 @@
   <style>
     .cp-hero {
       position: relative;
-      min-height: 55vh;
-      padding-top: calc(var(--header-height) + 50px);
+      min-height: 48vh;
+      padding-top: calc(var(--header-height) + 40px);
       padding-bottom: 50px;
       display: flex;
       align-items: center;
-      background: 
-        linear-gradient(to right, rgba(4, 13, 26, 0.95) 0%, rgba(4, 13, 26, 0.85) 50%, rgba(4, 13, 26, 0.95) 100%),
-        url('assets/images/lng_carrier.jpg') center/cover no-repeat;
+      background: var(--bg-primary);
       border-bottom: 1px solid var(--border-color);
-    }
-
-    [data-theme="light"] .cp-hero {
-      background: 
-        linear-gradient(to right, rgba(248, 250, 252, 0.96) 0%, rgba(248, 250, 252, 0.88) 50%, rgba(248, 250, 252, 0.96) 100%),
-        url('assets/images/lng_carrier.jpg') center/cover no-repeat;
     }
 
     .cp-values-grid {
@@ -215,20 +207,20 @@
 
     .cp-value-card:hover {
       transform: translateY(-4px);
-      border-color: var(--accent-gold);
-      box-shadow: var(--shadow-md), 0 0 20px rgba(var(--accent-gold-rgb), 0.2);
+      border-color: var(--accent-color);
+      box-shadow: var(--shadow-hover);
     }
 
     .cp-value-icon {
       font-size: 1.5rem;
-      color: var(--accent-gold-light);
+      color: var(--accent-color);
       margin-bottom: 10px;
     }
 
     .cp-value-title {
       font-family: var(--font-heading);
       font-size: 0.95rem;
-      font-weight: 700;
+      font-weight: 600;
       color: var(--text-primary);
     }
 
@@ -240,13 +232,13 @@
     }
 
     .cp-vm-card {
-      background: var(--grad-card);
+      background: var(--bg-card);
       border: 1px solid var(--border-color);
-      border-radius: var(--radius-lg);
+      border-radius: var(--radius-sm);
       padding: 34px 28px;
-      backdrop-filter: blur(16px);
       position: relative;
       overflow: hidden;
+      box-shadow: var(--shadow-sm);
     }
 
     .cp-vm-card::before {
@@ -256,20 +248,19 @@
       left: 0;
       width: 100%;
       height: 3px;
-      background: var(--grad-gold);
+      background: var(--accent-color);
     }
 
     .cp-vm-card.gold-card::before {
-      background: var(--grad-gold);
+      background: var(--accent-color);
     }
 
     .cp-vm-icon {
       width: 48px;
       height: 48px;
-      border-radius: var(--radius-md);
-      background: rgba(197, 168, 128, 0.12);
-      border: 1px solid rgba(197, 168, 128, 0.35);
-      color: var(--accent-gold-light);
+      border-radius: var(--radius-sm);
+      background: var(--shafer-blue-pale);
+      color: var(--shafer-blue);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -278,14 +269,15 @@
     }
 
     .gold-card .cp-vm-icon {
-      background: rgba(197, 168, 128, 0.18);
-      color: var(--accent-gold-light);
+      background: var(--shafer-blue-pale);
+      color: var(--shafer-blue);
     }
 
     .cp-vm-card h3 {
       font-family: var(--font-heading);
       font-size: 1.4rem;
       margin-bottom: 12px;
+      font-weight: 500;
     }
 
     .cp-vm-card p {
@@ -305,19 +297,19 @@
     .why-us-item {
       background: var(--bg-card);
       border: 1px solid var(--border-color);
-      border-radius: var(--radius-md);
+      border-radius: var(--radius-sm);
       padding: 18px 20px;
       display: flex;
       align-items: center;
       gap: 14px;
       transition: all var(--transition-fast);
+      box-shadow: var(--shadow-sm);
     }
 
     .why-us-item:hover {
-      border-color: var(--accent-gold);
+      border-color: var(--accent-color);
       transform: translateX(4px);
-      background: var(--bg-card-hover);
-      box-shadow: 0 4px 16px rgba(var(--accent-gold-rgb), 0.15);
+      box-shadow: var(--shadow-hover);
     }
 
     .why-us-check {
@@ -366,7 +358,7 @@
       <!-- Desktop Nav Menu -->
       <ul class="nav-menu" id="navMenu">
         <li><a href="index.html#home" class="nav-link">Home</a></li>
-        <li><a href="index.html#certified-by" class="nav-link">Certified By</a></li>
+        <li class="mobile-only-nav"><a href="index.html#certified-by" class="nav-link">Certified By</a></li>
         <li><a href="index.html#about" class="nav-link">About Me</a></li>
         <li><a href="index.html#services" class="nav-link">Services</a></li>
         <li><a href="index.html#fleet" class="nav-link">Fleet</a></li>
@@ -377,9 +369,6 @@
 
       <!-- Nav Actions -->
       <div class="nav-actions">
-        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Color Theme" title="Toggle Light/Dark Theme">
-          <i class="fa-solid fa-sun" id="themeIcon"></i>
-        </button>
         <a href="index.html#contact" class="btn-primary">
           <i class="fa-solid fa-calendar-check"></i>
           <span>Consultation</span>
@@ -399,7 +388,7 @@
         <h1 class="hero-title" style="margin-top: 10px; margin-bottom: 12px;">
           STEVE JOHNSON INTEGRATED SERVICES LTD.
         </h1>
-        <p class="hero-role" style="color: var(--accent-gold); font-size: 1.15rem; margin-bottom: 16px;">
+        <p class="hero-role" style="color: var(--accent-color); font-size: 1.15rem; margin-bottom: 16px;">
           Delivering safe, compliant, and high‑reliability marine and offshore operations.
         </p>
         <p class="hero-description" style="max-width: 750px;">
@@ -436,9 +425,9 @@
               With 42+ years of global maritime experience, including command of VLCC-class offshore assets (ExxonMobil Yoho FSO) and extensive regulatory inspection work for the Republic of the Marshall Islands (RMI), the company offers unmatched operational insight, safety leadership, and digital assurance capability.
             </p>
 
-            <div style="background: var(--bg-card); border-left: 4px solid var(--accent-gold); padding: 16px 20px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; border: 1px solid var(--border-color); border-left-width: 4px;">
+            <div style="background: var(--bg-card); border-left: 4px solid var(--accent-color); padding: 16px 20px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; border: 1px solid var(--border-color); border-left-width: 4px;">
               <p style="font-size: 0.92rem; color: var(--text-primary); font-weight: 600; margin-bottom: 0;">
-                <i class="fa-solid fa-quote-left" style="color: var(--accent-gold); margin-right: 6px;"></i>
+                <i class="fa-solid fa-quote-left" style="color: var(--accent-color); margin-right: 6px;"></i>
                 We help clients achieve safe operations, regulatory compliance, and operational excellence across high‑hazard marine and offshore environments.
               </p>
             </div>
@@ -757,15 +746,15 @@
         <div class="footer-col">
           <h4>Corporate Headquarters</h4>
           <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; margin-bottom: 12px;">
-            <i class="fa-solid fa-location-dot" style="color: var(--accent-gold); margin-right: 8px;"></i>
+            <i class="fa-solid fa-location-dot" style="color: var(--accent-color); margin-right: 8px;"></i>
             Steve Johnson Integrated Services Ltd.<br>Nigeria • Global Maritime Operations
           </p>
           <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; margin-bottom: 8px;">
-            <i class="fa-solid fa-phone" style="color: var(--accent-gold); margin-right: 8px;"></i>
+            <i class="fa-solid fa-phone" style="color: var(--accent-color); margin-right: 8px;"></i>
             <a href="tel:+2348066482498" style="color: inherit;">+234 806 648 2498</a>
           </p>
           <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6;">
-            <i class="fa-solid fa-envelope" style="color: var(--accent-gold); margin-right: 8px;"></i>
+            <i class="fa-solid fa-envelope" style="color: var(--accent-color); margin-right: 8px;"></i>
             <a href="mailto:sandinajohnson97@gmail.com" style="color: inherit;">sandinajohnson97@gmail.com</a>
           </p>
         </div>
@@ -777,40 +766,22 @@
         </div>
         <div style="display: flex; gap: 20px;">
           <a href="index.html#home" style="color: inherit;">Home</a>
-          <a href="company-profile.html" style="color: var(--accent-gold);">Company Profile</a>
+          <a href="company-profile.html" style="color: var(--accent-color);">Company Profile</a>
           <a href="index.html#contact" style="color: inherit;">Contact</a>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- Theme and Navigation Script -->
+  <!-- Navigation Script -->
   <script>
     const root = document.documentElement;
-    const themeToggleBtn = document.getElementById('themeToggleBtn');
-    const themeIcon = document.getElementById('themeIcon');
+    root.setAttribute('data-theme', 'light');
+    localStorage.removeItem('sjm_theme');
+
     const mobileBtn = document.getElementById('mobileMenuBtn');
     const navMenu = document.getElementById('navMenu');
     const navbar = document.getElementById('navbar');
-
-    const savedTheme = localStorage.getItem('sjm_theme') || 'dark';
-    setTheme(savedTheme);
-
-    if (themeToggleBtn) {
-      themeToggleBtn.addEventListener('click', () => {
-        const currentTheme = root.getAttribute('data-theme') || 'dark';
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        setTheme(newTheme);
-      });
-    }
-
-    function setTheme(theme) {
-      root.setAttribute('data-theme', theme);
-      localStorage.setItem('sjm_theme', theme);
-      if (themeIcon) {
-        themeIcon.className = theme === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
-      }
-    }
 
     window.addEventListener('scroll', () => {
       if (window.scrollY > 50) navbar.classList.add('scrolled');

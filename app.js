@@ -8,8 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const yearEl = document.getElementById('currentYear');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // 2. Theme Manager (Dark / Light Admiralty Mode)
-  initThemeManager();
+  // 2. Enforce Light Theme (Haute Luxury Shafer White Canvas)
+  document.documentElement.setAttribute('data-theme', 'light');
+  localStorage.removeItem('sjm_theme');
 
   // 3. Navigation Bar Scrollspy & Mobile Drawer
   initNavigation();
@@ -32,38 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // 9. FAQ Accordion Handler
   initFaqAccordion();
 });
-
-/* ==========================================================================
-   THEME MANAGER
-   ========================================================================== */
-function initThemeManager() {
-  const themeToggleBtn = document.getElementById('themeToggleBtn');
-  const themeIcon = document.getElementById('themeIcon');
-  const root = document.documentElement;
-
-  const savedTheme = localStorage.getItem('sjm_theme') || 'dark';
-  setTheme(savedTheme);
-
-  if (themeToggleBtn) {
-    themeToggleBtn.addEventListener('click', () => {
-      const currentTheme = root.getAttribute('data-theme');
-      const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      setTheme(nextTheme);
-    });
-  }
-
-  function setTheme(theme) {
-    root.setAttribute('data-theme', theme);
-    localStorage.setItem('sjm_theme', theme);
-    if (themeIcon) {
-      if (theme === 'dark') {
-        themeIcon.className = 'fa-solid fa-sun';
-      } else {
-        themeIcon.className = 'fa-solid fa-moon';
-      }
-    }
-  }
-}
 
 /* ==========================================================================
    NAVIGATION & SCROLLSPY
@@ -546,7 +515,7 @@ function initCareerSlideshow() {
             </div>
             <div class="slide-tech-item">
               <span class="slide-tech-label">Command Role:</span>
-              <span class="slide-tech-val" style="color: var(--accent-gold-light); font-weight: 600;">${slide.rank}</span>
+              <span class="slide-tech-val" style="color: var(--accent-color); font-weight: 600;">${slide.rank}</span>
             </div>
             <div class="slide-tech-item">
               <span class="slide-tech-label">Safety Benchmark:</span>
@@ -644,25 +613,25 @@ function initCareerSlideshow() {
       </div>
 
       <h2 style="font-size: 1.8rem; margin-bottom: 6px; color: var(--text-primary);">${slide.title}</h2>
-      <div style="font-family: var(--font-mono); font-size: 0.9rem; color: var(--accent-gold); margin-bottom: 20px;">
+      <div style="font-family: var(--font-mono); font-size: 0.9rem; color: var(--accent-color); margin-bottom: 20px;">
         IMO: ${slide.imo} • Summer Deadweight: ${slide.dwt}
       </div>
 
-      <div style="background: rgba(197, 168, 128, 0.08); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 18px; margin-bottom: 20px;">
+      <div style="background: var(--shafer-blue-pale); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 18px; margin-bottom: 20px;">
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
           <div>
             <div style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted);">Operating Line / Owner</div>
-            <div style="font-weight: 700; color: var(--text-primary); font-size: 0.95rem; font-family: var(--font-heading);">${slide.operator}</div>
+            <div style="font-weight: 600; color: var(--text-primary); font-size: 0.95rem; font-family: var(--font-heading);">${slide.operator}</div>
           </div>
           <div>
             <div style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted);">Command Role</div>
-            <div style="font-weight: 700; color: var(--accent-gold-light); font-size: 0.95rem;">${slide.rank}</div>
+            <div style="font-weight: 600; color: var(--accent-color); font-size: 0.95rem;">${slide.rank}</div>
           </div>
         </div>
       </div>
 
-      <h4 style="font-size: 1.15rem; margin-bottom: 8px; color: var(--accent-gold-light); font-family: var(--font-heading);">Operational Overview</h4>
-      <p style="color: var(--text-secondary); font-size: 0.94rem; line-height: 1.8; margin-bottom: 18px; font-weight: 300;">
+      <h4 style="font-size: 1.15rem; margin-bottom: 8px; color: var(--text-primary); font-family: var(--font-heading);">Operational Overview</h4>
+      <p style="color: var(--text-secondary); font-size: 0.94rem; line-height: 1.8; margin-bottom: 18px; font-weight: 400;">
         ${slide.desc}
       </p>
 
@@ -1054,30 +1023,30 @@ function initFleetGallery() {
       </div>
 
       <h2 style="font-size: 1.8rem; margin-bottom: 6px; color: var(--text-primary);">${vessel.name}</h2>
-      <div style="font-family: var(--font-mono); font-size: 0.9rem; color: var(--accent-gold); margin-bottom: 20px;">
+      <div style="font-family: var(--font-mono); font-size: 0.9rem; color: var(--accent-color); margin-bottom: 20px;">
         IMO: ${vessel.imo} • Summer Deadweight: ${vessel.dwt}
       </div>
 
-      <div style="background: rgba(197, 168, 128, 0.08); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 18px; margin-bottom: 20px;">
+      <div style="background: var(--shafer-blue-pale); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 18px; margin-bottom: 20px;">
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
           <div>
             <div style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted);">Operating Line / Owner</div>
-            <div style="font-weight: 700; color: var(--text-primary); font-size: 0.95rem; font-family: var(--font-heading);">${vessel.operator}</div>
+            <div style="font-weight: 600; color: var(--text-primary); font-size: 0.95rem; font-family: var(--font-heading);">${vessel.operator}</div>
           </div>
           <div>
             <div style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted);">Command Role & Period</div>
-            <div style="font-weight: 700; color: var(--accent-gold-light); font-size: 0.95rem;">${vessel.rank} (${vessel.period})</div>
+            <div style="font-weight: 600; color: var(--accent-color); font-size: 0.95rem;">${vessel.rank} (${vessel.period})</div>
           </div>
         </div>
       </div>
 
-      <h4 style="font-size: 1.15rem; margin-bottom: 8px; color: var(--accent-gold-light); font-family: var(--font-heading);">Operational Overview</h4>
-      <p style="color: var(--text-secondary); font-size: 0.94rem; line-height: 1.8; margin-bottom: 18px; font-weight: 300;">
+      <h4 style="font-size: 1.15rem; margin-bottom: 8px; color: var(--text-primary); font-family: var(--font-heading);">Operational Overview</h4>
+      <p style="color: var(--text-secondary); font-size: 0.94rem; line-height: 1.8; margin-bottom: 18px; font-weight: 400;">
         ${vessel.description}
       </p>
 
-      <h4 style="font-size: 1.15rem; margin-bottom: 8px; color: var(--accent-gold-light); font-family: var(--font-heading);">Technical & Leadership Highlights</h4>
-      <p style="color: var(--text-secondary); font-size: 0.94rem; line-height: 1.8; margin-bottom: 24px; font-weight: 300;">
+      <h4 style="font-size: 1.15rem; margin-bottom: 8px; color: var(--text-primary); font-family: var(--font-heading);">Technical & Leadership Highlights</h4>
+      <p style="color: var(--text-secondary); font-size: 0.94rem; line-height: 1.8; margin-bottom: 24px; font-weight: 400;">
         ${vessel.details}
       </p>
 
@@ -1249,7 +1218,7 @@ function initCredentialsVault() {
           </div>
         </div>
 
-        <div style="font-family: var(--font-mono); font-size: 0.76rem; color: var(--accent-gold); margin-bottom: 12px;">
+        <div style="font-family: var(--font-mono); font-size: 0.76rem; color: var(--accent-color); margin-bottom: 12px;">
           <i class="fa-solid fa-clock-rotate-left"></i> ${item.year}
         </div>
 
