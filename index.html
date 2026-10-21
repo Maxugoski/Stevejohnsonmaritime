@@ -351,8 +351,45 @@
   <!-- Main Hero Section -->
   <main>
     <section class="hero-section" id="home">
+      <div class="hero-bg-media" aria-hidden="true">
+        <!-- Built-in animated sailing ship scene (shows unless a real GIF/video below is present) -->
+        <div class="hero-scene">
+          <div class="scene-sky"></div>
+          <div class="scene-cloud cloud-1"></div>
+          <div class="scene-cloud cloud-2"></div>
+          <div class="scene-ship-wrap">
+            <svg class="scene-ship" viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sailing ship">
+              <!-- masts -->
+              <rect x="98" y="38" width="3.5" height="104" fill="#3d5a6c"/>
+              <rect x="138" y="26" width="3.5" height="116" fill="#3d5a6c"/>
+              <rect x="178" y="46" width="3.5" height="96" fill="#3d5a6c"/>
+              <!-- yards -->
+              <rect x="80" y="54" width="40" height="2.5" fill="#3d5a6c"/>
+              <rect x="116" y="40" width="48" height="2.5" fill="#3d5a6c"/>
+              <rect x="158" y="60" width="42" height="2.5" fill="#3d5a6c"/>
+              <!-- billowing sails -->
+              <path d="M100 46 Q58 86 100 132 Z" fill="#527387"/>
+              <path d="M140 30 Q96 88 140 142 Z" fill="#6a8da3"/>
+              <path d="M180 50 Q142 96 180 138 Z" fill="#527387"/>
+              <!-- jib / foresail -->
+              <path d="M97 58 Q66 96 58 132 L97 132 Z" fill="#9baeba"/>
+              <!-- hull -->
+              <path d="M38 140 L206 140 L178 172 L72 172 Z" fill="#3d5a6c"/>
+              <path d="M52 150 L192 150" stroke="#263b47" stroke-width="2.5"/>
+            </svg>
+          </div>
+          <div class="scene-sea">
+            <div class="wave wave-back"></div>
+            <div class="wave wave-front"></div>
+          </div>
+        </div>
+        <!-- Optional drop-in media: place these files in the project to override the built-in scene -->
+        <img class="hero-bg-gif" src="assets/images/hero_sailing_ship.gif" alt="" onerror="this.remove()">
+        <video class="hero-bg-video" autoplay muted loop playsinline preload="auto" onerror="this.remove()">
+          <source src="assets/media/hero_sailing_ship.mp4" type="video/mp4">
+        </video>
+      </div>
       <div class="hero-bg-overlay"></div>
-      <div class="hero-glow-blob"></div>
 
       <div class="container hero-grid">
         <!-- Hero Text Column -->
